@@ -7,10 +7,15 @@ const cors = require('cors')
 
 // Middleware
 app.use(express.json())
-// app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 app.get("/",(req, res) => res.send('Hello Group8!'));
+
+const {companyRoutes, employeeRoutes, countriesAPI} = require('./routes')
+app.use('/api', companyRoutes, employeeRoutes, countriesAPI)
+
+
 app.all('*', (req, res) => {
     res.status(404).json({ message: 'Not Found' });
 });
