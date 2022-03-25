@@ -12,8 +12,8 @@ app.use(cors());
 
 app.get("/",(req, res) => res.send('Hello Group8!'));
 
-const {companyRoutes, employeeRoutes, countriesAPI} = require('./routes')
-app.use('/api', companyRoutes, employeeRoutes, countriesAPI)
+const {companyRoutes, employeeRoutes, countriesAPI, fibonacciAPI, combinationAPI} = require('./routes')
+app.use('/api', companyRoutes, employeeRoutes, countriesAPI,fibonacciAPI, combinationAPI)
 
 
 app.all('*', (req, res) => {

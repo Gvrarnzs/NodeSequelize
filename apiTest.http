@@ -48,3 +48,19 @@ DELETE  http://localhost:2003/api/employees/4 HTTP/1.1
 GET http://localhost:2003/api/countries HTTP/1.1
 Content-Type: application/json
 
+###GET Test Fibonacci
+POST http://localhost:2003/api/fibonacci HTTP/1.1
+Content-Type: application/json
+
+{
+    "n" : "dasda"
+}
+
+###GET Test Combination
+POST http://localhost:2003/api/combination HTTP/1.1
+Content-Type: application/json
+
+{
+    "n" : 4,
+    "r" : 2
+}
